@@ -6,6 +6,7 @@ Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://files.jabberstudio.org/iksemel/%{name}-%{version}.tar.gz
+# Source0-md5: 360bc79b6d39f7074d01da5b14790637
 URL:		http://iksemel.jabberstudio.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
