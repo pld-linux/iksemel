@@ -23,7 +23,7 @@ too, if the need arises.
 Iksemel jest bibliotek± C dla platformy komunikacyjnej Jabbera.
 Iksemel obs³uguje po³±czenia Jabbera, analizuje XML oraz wysy³a i
 odbiera komunikaty Jabbera. Dzia³± dobrze parsuj±c tak¿e inne rodzaje
-XML, je¶li jest taka potrzeba.
+XML-a, je¶li jest taka potrzeba.
 
 %package devel
 Summary:	Iksemel library development files
