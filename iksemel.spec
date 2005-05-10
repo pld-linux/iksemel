@@ -1,15 +1,16 @@
 Summary:	Library for the Jabber instant-messaging IM platform
 Summary(pl):	Biblioteka dla platformy komunikacyjnej Jabbera
 Name:		iksemel
-Version:	1.1
-Release:	2
+Version:	1.2
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://files.jabberstudio.org/iksemel/%{name}-%{version}.tar.gz
-# Source0-md5:	3ab98b92fa051d513ca0d6377ceb50f6
+# Source0-md5:	82e7c8fdb6211839246b788c040a796b
 URL:		http://iksemel.jabberstudio.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gnutls-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -64,7 +65,8 @@ Statyczna wersja biblioteki Iksemel.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -75,6 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README ChangeLog
+%attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/*.so.*.*
 
 %files devel
