@@ -1,5 +1,5 @@
 Summary:	Library for the Jabber instant-messaging IM platform
-Summary(pl):	Biblioteka dla platformy komunikacyjnej Jabbera
+Summary(pl.UTF-8):   Biblioteka dla platformy komunikacyjnej Jabbera
 Name:		iksemel
 Version:	1.2
 Release:	2
@@ -20,34 +20,34 @@ Iksemel handles Jabber connections, parses XML, and sends and receives
 Jabber messages. It works pretty good for parsing other kinds of XML,
 too, if the need arises.
 
-%description -l pl
-Iksemel jest bibliotek± C dla platformy komunikacyjnej Jabbera.
-Iksemel obs≥uguje po≥±czenia Jabbera, analizuje XML oraz wysy≥a i
-odbiera komunikaty Jabbera. Dzia≥a dobrze parsuj±c takøe inne rodzaje
-XML-a, je∂li jest taka potrzeba.
+%description -l pl.UTF-8
+Iksemel jest bibliotekƒÖ C dla platformy komunikacyjnej Jabbera.
+Iksemel obs≈Çuguje po≈ÇƒÖczenia Jabbera, analizuje XML oraz wysy≈Ça i
+odbiera komunikaty Jabbera. Dzia≈Ça dobrze parsujƒÖc tak≈ºe inne rodzaje
+XML-a, je≈õli jest taka potrzeba.
 
 %package devel
 Summary:	Iksemel library development files
-Summary(pl):	Pliki dla programistÛw uøywaj±cych biblioteki Iksemel
+Summary(pl.UTF-8):   Pliki dla programist√≥w u≈ºywajƒÖcych biblioteki Iksemel
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Iksemel library development files.
 
-%description devel -l pl
-Pliki dla programistÛw uøywaj±cych biblioteki Iksemel.
+%description devel -l pl.UTF-8
+Pliki dla programist√≥w u≈ºywajƒÖcych biblioteki Iksemel.
 
 %package static
 Summary:	Static Iksemel library
-Summary(pl):	Statyczna wersja biblioteki Iksemel
+Summary(pl.UTF-8):   Statyczna wersja biblioteki Iksemel
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Iksemel library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna wersja biblioteki Iksemel.
 
 %prep
