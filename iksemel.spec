@@ -1,5 +1,5 @@
 Summary:	Library for the Jabber instant-messaging IM platform
-Summary(pl.UTF-8):   Biblioteka dla platformy komunikacyjnej Jabbera
+Summary(pl.UTF-8):	Biblioteka dla platformy komunikacyjnej Jabbera
 Name:		iksemel
 Version:	1.2
 Release:	2
@@ -28,7 +28,7 @@ XML-a, jeśli jest taka potrzeba.
 
 %package devel
 Summary:	Iksemel library development files
-Summary(pl.UTF-8):   Pliki dla programistów używających biblioteki Iksemel
+Summary(pl.UTF-8):	Pliki dla programistów używających biblioteki Iksemel
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -40,7 +40,7 @@ Pliki dla programistów używających biblioteki Iksemel.
 
 %package static
 Summary:	Static Iksemel library
-Summary(pl.UTF-8):   Statyczna wersja biblioteki Iksemel
+Summary(pl.UTF-8):	Statyczna wersja biblioteki Iksemel
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
