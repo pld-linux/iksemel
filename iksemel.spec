@@ -1,14 +1,15 @@
 Summary:	Library for the Jabber instant-messaging IM platform
 Summary(pl.UTF-8):	Biblioteka dla platformy komunikacyjnej Jabbera
 Name:		iksemel
-Version:	1.2
-Release:	3
+Version:	1.4
+Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://files.jabberstudio.org/iksemel/%{name}-%{version}.tar.gz
-# Source0-md5:	82e7c8fdb6211839246b788c040a796b
-URL:		http://iksemel.jabberstudio.org/
-BuildRequires:	autoconf
+Source0:	http://iksemel.googlecode.com/files/%{name}-%{version}.tar.gz
+# Source0-md5:	532e77181694f87ad5eb59435d11c1ca
+Patch0:		%{name}-configure.patch
+URL:		http://code.google.com/p/iksemel/
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	gnutls-devel >= 1.2.5
 BuildRequires:	libtool
@@ -52,6 +53,7 @@ Statyczna wersja biblioteki Iksemel.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -74,19 +76,29 @@ rm -rf $RPM_BUILD_ROOT
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
+%post	devel -p /sbin/postshell
+-/usr/sbin/fix-info-dir -c %{_infodir}
+
+%postun	devel -p /sbin/postshell
+-/usr/sbin/fix-info-dir -c %{_infodir}
+
 %files
 %defattr(644,root,root,755)
 %doc README ChangeLog
-%attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/*.so.*.*
+%attr(755,root,root) %{_bindir}/ikslint
+%attr(755,root,root) %{_bindir}/iksperf
+%attr(755,root,root) %{_bindir}/iksroster
+%attr(755,root,root) %{_libdir}/libiksemel.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libiksemel.so.3
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/*.so
-%{_libdir}/*.la
-%{_includedir}/*
-%{_pkgconfigdir}/*.pc
+%attr(755,root,root) %{_libdir}/libiksemel.so
+%{_libdir}/libiksemel.la
+%{_includedir}/iksemel.h
+%{_pkgconfigdir}/iksemel.pc
+%{_infodir}/iksemel
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/*.a
+%{_libdir}/libiksemel.a
