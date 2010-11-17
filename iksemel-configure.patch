@@ -1,0 +1,12 @@
+diff -urN iksemel-1.4/configure.ac iksemel-1.4.new//configure.ac
+--- iksemel-1.4/configure.ac	2009-07-23 13:16:36.000000000 +0200
++++ iksemel-1.4.new//configure.ac	2010-11-17 08:55:34.805298666 +0100
+@@ -45,7 +45,7 @@
+ AC_CHECK_FUNCS(getopt_long)
+ AC_CHECK_FUNCS(getaddrinfo)
+ 
+-AM_PATH_LIBGNUTLS(,AC_DEFINE(HAVE_GNUTLS,,"Use libgnutls"))
++PKG_CHECK_MODULES(LIBGNUTLS, gnutls >= 2.0.0, AC_DEFINE(HAVE_GNUTLS,,"Use libgnutls"))
+ 
+ dnl Check -Wall flag of GCC
+ if test "x$GCC" = "xyes"; then
