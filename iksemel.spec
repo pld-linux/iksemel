@@ -2,12 +2,13 @@ Summary:	Library for the Jabber instant-messaging IM platform
 Summary(pl.UTF-8):	Biblioteka dla platformy komunikacyjnej Jabbera
 Name:		iksemel
 Version:	1.4
-Release:	4
+Release:	5
 License:	LGPL
 Group:		Libraries
 Source0:	http://iksemel.googlecode.com/files/%{name}-%{version}.tar.gz
 # Source0-md5:	532e77181694f87ad5eb59435d11c1ca
 Patch0:		%{name}-configure.patch
+Patch1:		secure_gnutls_options.patch
 URL:		http://code.google.com/p/iksemel/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -55,6 +56,7 @@ Statyczna wersja biblioteki Iksemel.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__libtoolize}
